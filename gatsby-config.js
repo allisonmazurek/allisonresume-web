@@ -3,10 +3,10 @@ require("dotenv").config({
 })
 
 module.exports = {
-  pathPrefix: "/sashaphoto-gatsby-template",
+  pathPrefix: "",
   siteMetadata: {
-    title: `Sashaphoto Gatsby Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Allison Mazurek`,
+    description: `Resume. Blog. Electrical Engineering. Architecture`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },

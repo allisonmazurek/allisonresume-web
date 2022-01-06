@@ -1,13 +1,36 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
+import { IGatsbyImageData, StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../utility/seo"
+import List from "../components/List"
+import Card_List from "../components/Card_List"
+import UseEffectComponent from "../components/UseEffectComponent"
+import UseContextComponent from "../components/UseContextComponent"
 
-const IndexPage: React.FC = () => (
-  <Layout>
-    <Seo title="Home" />
+interface IState{
+  Card: {
+    header: string;
+    body:string;
+    date?:string;
+    location?:string;
+    image?: IGatsbyImageData;
+    url?: string;
+  }
+}
+
+const IndexPage: React.FC = () => {
+
+  const [Card, setCard] = React.useState<IState["Card"]>({
+    header: "Allison Mazurek",
+    body: "My Name is Allison Mazurek",
+    date: "January 5th, 2022",
+  })
+
+  // @ts-ignore
+  return(
+    <Layout>
+    {/*<Seo title="Home" />
     <h1>Hello all</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
@@ -29,11 +52,17 @@ const IndexPage: React.FC = () => (
       <li>Automatic color palettes</li>
       <li>Google Analytics & GitHub Pages plugins builtin</li>
     </ul>
-    <p>
       <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link className={'Magic'} to="/about-styling/">About Styling</Link>
+      <Link className={'Magic'} to="/about-styling/">About Styling</Link>*/}
+    <p>
+      <List Card={Card}/>
+      <List Card={Card}/>
+      <List Card={Card}/>
+{/*      <Card_List />
+      <UseEffectComponent />
+      <UseContextComponent />*/}
     </p>
   </Layout>
 )
-
+}
 export default IndexPage

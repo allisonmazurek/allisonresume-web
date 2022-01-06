@@ -4,6 +4,8 @@
 @import 'animations';
 
 $border-radius: 2px;
+$background-color: white;
+$font-stack: Poppins, sans-serif;
 
 .ShowPalette {
   @include draw-palette($accent);
@@ -51,4 +53,32 @@ mark {
     top: 0;
     z-index: 999;
 }
+
+.Card{
+  max-width: 600px;
+  padding: 1em;
+  background-color: white;
+}
+
+.Card-Active{
+  max-width: 600px;
+  padding: 1em;
+  background-color: red;
+}
+
+h1, .Card, .Card-Active{
+  font-weight: 400;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #7F3128;
+}
+
+p, .Card, .Card-Active{
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #7F3128;
+}
+
+
 
